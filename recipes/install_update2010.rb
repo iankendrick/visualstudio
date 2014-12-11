@@ -22,9 +22,8 @@
 
 sp_is_installed = is_sp_installed(node['visualstudio']['2010_update']['package_regkey'])
 # Ensure the installation ISO url has been set by the user
-unless (source = node['visualstudio']['2010_update']['source'] ||node['visualstudio']['source'])
-  raise 'visualstudio update source attribute must be set before running this recipe'
-end
+source = node['visualstudio']['2010_update']['source'] || node['visualstudio']['source']
+raise 'visualstudio update source attribute must be set before running this recipe' unless source
 
 install_url = File.join(source, node['visualstudio']['2010_update']['filename'])
 
