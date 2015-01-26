@@ -34,6 +34,8 @@
   setup_exe_path = File.join(iso_extraction_dir, node['visualstudio'][edition]['installer_file'])
   configure_basename = node['visualstudio'][edition]['config_file'] || 'AdminDeployment.xml'
   configuration_file = win_friendly_path(File.join(iso_extraction_dir, configure_basename))
+  conf_source = node['visualstudio'][edition]['config_file'] ||
+    'AdminDeployment-' + edition + '.xml'
 
   # Extract the ISO image to the tmp dir
   seven_zip_archive 'extract_vs2012_iso' do
@@ -44,11 +46,8 @@
     not_if { vs_is_installed }
   end
 
-  conf_source = node['visualstudio'][edition]['config_file'] ||
-    'AdminDeployment-' + edition + '.xml'
-
   # Create installation config file
-  cookbook_file configuration_file do
+  cookbook_file('C:/' + configuration_file) do
     source conf_source
     action :create
     not_if { vs_is_installed }
