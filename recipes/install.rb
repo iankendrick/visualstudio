@@ -47,7 +47,7 @@
   end
 
   # Create installation config file
-  cookbook_file('C:/' + configuration_file) do
+  cookbook_file configuration_file do
     source conf_source
     action :create
     not_if { vs_is_installed }
