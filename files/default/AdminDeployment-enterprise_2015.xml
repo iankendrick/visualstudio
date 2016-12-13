@@ -2,15 +2,15 @@
 <AdminDeploymentCustomizations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/wix/2011/AdminDeployment">
   <BundleCustomizations TargetDir="default" NoCacheOnlyMode="default" NoWeb="yes" NoRefresh="yes" Feed="default" />
   <SelectableItemCustomizations>
-    <SelectableItemCustomization Id="NativeLanguageSupport_VCV1" Hidden="no" Selected="no" FriendlyName="Common Tools for Visual C++ 2015" />
-    <SelectableItemCustomization Id="NativeLanguageSupport_MFCV1" Hidden="no" Selected="no" FriendlyName="Microsoft Foundation Classes for C++" />
-    <SelectableItemCustomization Id="NativeLanguageSupport_XPV1" Hidden="no" Selected="no" FriendlyName="Windows XP Support for C++" />
+    <SelectableItemCustomization Id="NativeLanguageSupport_VCV1" Hidden="no" Selected="yes" FriendlyName="Common Tools for Visual C++ 2015" />
+    <SelectableItemCustomization Id="NativeLanguageSupport_MFCV1" Hidden="no" Selected="yes" FriendlyName="Microsoft Foundation Classes for C++" />
+    <SelectableItemCustomization Id="NativeLanguageSupport_XPV1" Hidden="no" Selected="yes" FriendlyName="Windows XP Support for C++" />
     <SelectableItemCustomization Id="Win81SDK_HiddenV1" Hidden="no" Selected="no" FriendlyName="Windows 8.1 SDK and Universal CRT SDK" />
     <SelectableItemCustomization Id="FSharpV1" Hidden="no" Selected="no" FriendlyName="Visual F#" />
     <SelectableItemCustomization Id="PythonToolsForVisualStudioV1" Hidden="no" Selected="no" FriendlyName="Python Tools for Visual Studio" />
     <SelectableItemCustomization Id="ClickOnceV1" Hidden="no" Selected="no" FriendlyName="ClickOnce Publishing Tools" />
     <SelectableItemCustomization Id="LightSwitchV1" Hidden="no" Selected="no" FriendlyName="LightSwitch" />
-    <SelectableItemCustomization Id="OfficeDeveloperToolsV1" Hidden="no" Selected="no" FriendlyName="Microsoft Office Developer Tools" />
+    <SelectableItemCustomization Id="OfficeDeveloperToolsV1" Hidden="no" Selected="yes" FriendlyName="Microsoft Office Developer Tools" />
     <SelectableItemCustomization Id="SilverLight_Developer_KitV1" Hidden="no" Selected="no" FriendlyName="Silverlight Development Kit" />
     <SelectableItemCustomization Id="Windows10_ToolsAndSDKV2" Hidden="no" Selected="no" FriendlyName="Tools (1.1.1) and Windows SDK (10.0.10240)" />
     <SelectableItemCustomization Id="Win10_EmulatorV1" Hidden="no" Selected="no" FriendlyName="Emulators for Windows Mobile (10.0.10240)" />
