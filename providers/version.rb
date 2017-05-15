@@ -11,6 +11,8 @@ action :create do
       Chef::Config[:file_cache_path], 'vs2012', edition))
     setup_exe_path = ::File.join(extracted_iso, new_resource.installer_file)
 
+    directory new_resource.install_dir
+
     # Extract the ISO image to the tmp dir
     seven_zip_archive "extract #{edition} iso" do
       path extracted_iso
