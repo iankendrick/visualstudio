@@ -64,6 +64,7 @@
     end
     notifies :delete, "directory[#{iso_extraction_dir}]"
     timeout 3600 # 1hour
+    success_codes [0, 42, 127, 3010]
     not_if { vs_is_installed }
   end
 
